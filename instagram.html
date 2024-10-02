@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Instagram clone</title>
+</head>
+<body>
+    <main class="flex align-items-center justify-content-center">
+        <section id="mobile" class="flex">
+        </section>
+        <section id="auth" class="flex direction-column">
+            <div class="panel login flex direction-column">
+                <h1 title="Instagram" class="flex justify-content-center">
+                    <img src="https://raw.githubusercontent.com/laisfrigerio/instagram-clone-login-page/master/img/instagram-logo.png" alt="Instagram logo" title="Instagram logo" />
+                </h1>
+                <form>
+                    <label for="email" class="sr-only">Enter your name </label>
+                    <input name="email" placeholder="Enter your email " />
+
+                    <label for="password" class="sr-only">Senha</label>
+                    <input name="password" type="password" placeholder="password" />
+
+                    <button type="button">Enter</button>
+                </form>
+                <div class="flex separator align-items-center">
+                    <span></span>
+                    <div class="or">OR</div>
+                    <span></span>
+                </div>
+                <div class="login-with-fb flex direction-column align-items-center">
+                    <div>
+                        <img />
+                        <a>Continue using  facebook</a>
+                    </div>
+                    <a href="#">Forgotten your password? click here </a>
+                </div>
+            </div>
+            <div class="panel register flex justify-content-center">
+                <p>Don't have account?  </p>
+                <a href="#">Registor here? </a>
+            </div>
+            <div class="app-download flex direction-column align-items-center">
+                <p>Our Platform </p>
+                <div class="flex justify-content-center">
+                    <img src="https://raw.githubusercontent.com/laisfrigerio/instagram-clone-login-page/master/img/apple-button.png"      alt="Imagem com a logo da Apple Store" title="Imagem com a logo da Apple Store" />
+                    <img src="https://raw.githubusercontent.com/laisfrigerio/instagram-clone-login-page/master/img/googleplay-button.png" alt="Imagem com a logo da Google Play" title="Imagem com a logo da Google Play" />
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+       
+        <p class="copyright">© 2020 Instagram do Facebook</p>
+    </footer>
+    <script>
+        // JavaScript for Instagram Clone
+
+// Function to handle the login form submission
+function handleLogin(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form values
+    const email = document.querySelector('input[name="email"]').value;
+    const password = document.querySelector('input[name="password"]').value;
+
+    // Validate email and password
+    if (email === "") {
+        alert("Please enter your email.");
+        return;
+    }
+
+    if (password === "") {
+        alert("Please enter your password.");
+        return;
+    }
+
+    // Perform a fake login (in a real scenario, this would involve API calls)
+    if (email === "varunvermaa2000@gmail.com" && password === "password123") {
+        alert("Login successful!");
+    } else {
+        alert("Invalid email or password.");
+    }
+}
+
+// Add event listener for the "Enter" button
+document.querySelector('button[type="button"]').addEventListener('click', handleLogin);
+
+// Optional: Handle 'Enter' key press to trigger login
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Enter") {
+        handleLogin(event);
+    }
+});
+    </script>
+</body>
+</html>
